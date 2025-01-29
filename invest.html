@@ -1,21 +1,20 @@
-<!-- Author: Payal Sapariya*-->
-<!DOCTYPE html>
-<html>
+<!-- Author: Simran Chandna-->
+<!DOCTYPE html>  
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Our Team</title>
+        <title>Student Finance Tracker</title>
         <!-- This is the head section containing meta tags and title -->
     </head>
 <body>
-
-    <!---header starts here-->
+    <!---Dashboard Header starts here-->
     <header>
         <div>
             <!-- Logo and branding section -->
             <a href="dashboard.html"><img src="logo.png" alt="Finance Tracker Logo"></a>
         </div>
-    
+
         <div>
             <nav>
                 <ul>
@@ -35,7 +34,7 @@
                         </ul>
                     </li>
                     <li><a href="#">Expenses</a>
-                        <!-- Subcategories for Expenses  -->
+                        <!-- Subcategories for Expenses -->
                         <ul>
                             <li><a href="flexibleexpenses.html">Flexible Expenses</a></li>
                             <li><a href="recurringexpenses.html">Recurring Expenses </a></li>
@@ -50,56 +49,58 @@
             </nav>
         </div>  
     </header>
-    <!---header ends here-->
+    <!---Dashboard Header ends here-->
 
-    <div>
-        <!-- Main heading of the page -->
-        <h1>The Team</h1>
-        
-        <!-- First row of team members -->
-        <div>
-            <!-- Team member: Amandeep -->
-            <div>
-                <h2>Amandeep</h2>
-                <button>About Amandeep</button>
-                <!-- This button could link to more details about Amandeep -->
-            </div>
-            
-            <!-- Team member: Navie -->
-            <div>
-                <h2>Navie</h2>
-                <button>About Navie</button>
-                <!-- This button could link to more details about Navie -->
-            </div>
-            
-            <!-- Team member: Anelise -->
-            <div>
-                <h2>Anelise</h2>
-                <button>About Anelise</button>
-                <!-- This button could link to more details about Anelise -->
-            </div>
-        </div>
-        
-        <!-- Second row of team members -->
-        <div>
-            <!-- Team member: Simran -->
-            <div>
-                <h2>Simran</h2>
-                <button>About Simran</button>
-                <!-- This button could link to more details about Simran -->
-            </div>
-            
-            <!-- Team member: Payal -->
-            <div>
-                <h2>Payal</h2>
-                <button>About Payal</button>
-                <!-- This button could link to more details about Payal -->
-            </div>
-        </div>
-     
-    </div>
+    <!---main section starts here---->
+    <main>
+        <div class="container">
 
-    <!---- footer starts here -->
+            <!-- Add Investment Form -->
+            <section class="add-investment">
+                <h2>Add Investment</h2>
+
+                <form id="investment-form">
+                    <label for="investment-type">Investment Type</label>
+                    <select id="investment-type" required>
+                        <option value="stock">Stock</option>
+                        <option value="bitcoin">Bitcoin</option>
+                        <option value="crypto">Crypto</option>
+                        <option value="bank">Bank Investment</option>
+                    </select>
+                    
+                    <label for="investment-amount">Amount Invested</label>
+                    <input type="number" id="investment-amount" placeholder="E.g., 1000" required>
+                    
+                    <label for="investment-description">Description</label>
+                    <input type="text" id="investment-description" placeholder="E.g., Apple Stock" required>
+                    
+                    <label for="investment-date">Investment Date</label>
+                    <input type="date" id="investment-date" required>
+                    
+                    <button type="submit">Add Investment</button>
+                </form>
+            </section>
+
+            <!-- Investment Balances -->
+            <section class="balances">
+                <h2>Investment Balances</h2>
+                <ul id="balances-list">
+                <li>No investments yet.</li>
+                </ul>
+            </section>
+        
+            <!-- Investment Summary -->
+            <section class="summary">
+                <h2>Investment Summary</h2>
+                <ul id="summary-list">
+                <li>No investments added yet.</li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- footer starts here -->
     <footer>
         <div>
             <!-- Footer Navigation Links -->
@@ -111,7 +112,7 @@
             </ul>
         </div>
     </footer>
-<!-- footer ends here -->
+    <!-- footer ends here -->
 
 </body>
 </html>
